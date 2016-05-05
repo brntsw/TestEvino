@@ -1,10 +1,12 @@
-package evino.test.com.br.testevino;
+package evino.test.com.br.testevino.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import evino.test.com.br.testevino.R;
 
 
 public class MainActivity extends AppCompatActivity {
