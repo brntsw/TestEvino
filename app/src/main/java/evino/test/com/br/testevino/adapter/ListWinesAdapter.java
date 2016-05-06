@@ -15,11 +15,11 @@ import evino.test.com.br.testevino.models.Wine;
 /**
  * Created by techresult on 05/05/2016.
  */
-public class ListaVinhosAdapter extends RecyclerView.Adapter<ListaVinhosAdapter.ViewHolder> {
+public class ListWinesAdapter extends RecyclerView.Adapter<ListWinesAdapter.ViewHolder> {
 
     private List<Wine> wines;
 
-    public ListaVinhosAdapter(List<Wine> wines){
+    public ListWinesAdapter(List<Wine> wines){
         this.wines = wines;
     }
 

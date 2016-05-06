@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import evino.test.com.br.testevino.R;
-import evino.test.com.br.testevino.adapter.ListaVinhosAdapter;
+import evino.test.com.br.testevino.adapter.ListWinesAdapter;
 import evino.test.com.br.testevino.models.Wine;
 
 /**
@@ -24,11 +24,11 @@ public class FragmentTabWine extends Fragment {
 
     private List<Wine> wines;
     private RecyclerView recyclerView;
-    private ListaVinhosAdapter adapter;
+    private ListWinesAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.fragment_tab_wine, container, false);
+        LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.fragment_tab, container, false);
 
         // TODO Dummy data wines ->>>> Change this with the data provenient from the nertwork
         List<String> infos1 = new ArrayList<>();
@@ -80,9 +80,9 @@ public class FragmentTabWine extends Fragment {
 
         // --------------------------------------------------------------------- //
 
-        adapter = new ListaVinhosAdapter(wines);
+        adapter = new ListWinesAdapter(wines);
 
-        recyclerView = (RecyclerView) layout.findViewById(R.id.recycler_wines);
+        recyclerView = (RecyclerView) layout.findViewById(R.id.recycler);
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);

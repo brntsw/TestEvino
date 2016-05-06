@@ -11,6 +11,7 @@
     <string name="tab_wines">Vinhos</string>
     <string name="tab_cart">Carrinho</string>
     <string name="wine_image_description">Garrafa de vinho</string>
+    <string name="delete_purchase">Apagar a compra</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="hello_world">Hello world!</string>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_wine"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:contentDescription="@string/wine_image_description" />
+
+    <TextView
+        android:id="@+id/tv_wine_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do vinho vinho vinho"
+        android:textSize="22sp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/img_wine"
+        android:layout_toEndOf="@+id/img_wine"/>
+
+    <TextView
+        android:id="@+id/tv_wine_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$ 75,00"
+        android:textSize="22sp"
+        android:layout_toRightOf="@+id/img_wine"
+        android:layout_toEndOf="@+id/img_wine"
+        android:layout_below="@+id/tv_wine_name" />
+
+    <EditText
+        android:id="@+id/edit_quantity"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="3"
+        android:textSize="22sp"
+        android:inputType="number"
+        android:layout_toRightOf="@+id/tv_wine_price"
+        android:layout_toEndOf="@+id/tv_wine_price"
+        android:layout_below="@+id/tv_wine_name"/>
+
+    <ImageButton
+        android:id="@+id/bt_img_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/transparente"
+        android:src="@drawable/delete"
+        android:contentDescription="@string/delete_purchase"
+        android:layout_toRightOf="@+id/edit_quantity"
+        android:layout_toEndOf="@+id/edit_quantity"
+        android:layout_below="@+id/tv_wine_name"/>
+
+</RelativeLayout>

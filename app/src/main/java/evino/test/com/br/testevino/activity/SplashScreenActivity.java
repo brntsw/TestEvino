@@ -23,6 +23,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        // TODO fazer toda a lógica do splash
         //Verifica se tem token salvo
 
         // Se SIM, abre a Splashscreen  e verifica se o token está válido
