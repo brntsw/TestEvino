@@ -1,6 +1,7 @@
 package evino.test.com.br.testevino.activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -38,14 +39,17 @@ public class LoginActivity extends AppCompatActivity implements IUIComponents {
     protected void onResume(){
         super.onResume();
 
-        final String user = editUser.getText().toString();
-        final String pass = editPass.getText().toString();
-
         btLogar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String user = editUser.getText().toString();
+                String pass = editPass.getText().toString();
+
                 if(!user.equals("") && !pass.equals("")){
-                    Toast.makeText(LoginActivity.this, ToastUtils.increaseToastText("Login realizado!"), Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(i);
+
+                    finish();
                 }
                 else{
                     if(user.equals("")){

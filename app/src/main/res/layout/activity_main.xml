@@ -7,4 +7,11 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
 
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="evino.test.com.br.testevino.fragments.FragmentTabsMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"/>
+
 </RelativeLayout>

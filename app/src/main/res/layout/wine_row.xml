@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_wine"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:contentDescription="@string/wine_image_description" />
+
+    <TextView
+        android:id="@+id/tv_wine_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do vinho"
+        android:textSize="22sp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/img_wine"
+        android:layout_toEndOf="@+id/img_wine"/>
+
+    <TextView
+        android:id="@+id/tv_wine_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tinto * Italia * Piemont * Nebbiolo"
+        android:textSize="16sp"
+        android:layout_toRightOf="@+id/img_wine"
+        android:layout_toEndOf="@+id/img_wine"
+        android:layout_below="@+id/tv_wine_name" />
+
+</RelativeLayout>

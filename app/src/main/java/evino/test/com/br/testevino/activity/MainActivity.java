@@ -1,5 +1,6 @@
 package evino.test.com.br.testevino.activity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -7,18 +8,30 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import evino.test.com.br.testevino.R;
+import evino.test.com.br.testevino.interfaces.IUIComponents;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements IUIComponents {
 
     private Toolbar toolbar;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        initializeComponents();
+    }
+
+    protected void onResume(){
+        super.onResume();
+
         toolbar.setTitle(R.string.app_name);
         setSupportActionBar(toolbar);
     }
@@ -43,5 +56,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void initializeComponents() {
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
     }
 }
