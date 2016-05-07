@@ -2,10 +2,13 @@ package evino.test.com.br.testevino.activity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import evino.test.com.br.testevino.R;
 import evino.test.com.br.testevino.interfaces.IUIComponents;
@@ -15,6 +18,8 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class MainActivity extends AppCompatActivity implements IUIComponents {
 
     private Toolbar toolbar;
+    private DrawerLayout drawerLayout;
+    private ActionBarDrawerToggle drawerToggle;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -27,6 +32,26 @@ public class MainActivity extends AppCompatActivity implements IUIComponents {
         setContentView(R.layout.activity_main);
 
         initializeComponents();
+
+        drawerToggle = new ActionBarDrawerToggle(this, drawerLayout,
+                toolbar, //nav menu toggle icon
+                R.string.app_name, // nav drawer open - description for accessibility
+                R.string.app_name // nav drawer close - description for accessibility
+        ){
+            public void onDrawerClosed(View view) {
+                toolbar.setTitle(getResources().getString(R.string.app_name));
+                // calling onPrepareOptionsMenu() to show action bar icons
+                invalidateOptionsMenu();
+            }
+
+            public void onDrawerOpened(View drawerView) {
+                toolbar.setTitle("");
+                // calling onPrepareOptionsMenu() to hide action bar icons
+                invalidateOptionsMenu();
+            }
+        };
+
+        drawerLayout.setDrawerListener(drawerToggle);
     }
 
     protected void onResume(){
@@ -60,6 +85,9 @@ public class MainActivity extends AppCompatActivity implements IUIComponents {
 
     @Override
     public void initializeComponents() {
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
     }
 }

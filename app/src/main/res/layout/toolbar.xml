@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toolbar"
     android:minHeight="?attr/actionBarSize"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/toolbar_background"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:elevation="2dp"
     android:theme="@style/Theme.Toolbar"
-    app:titleTextAppearance="@style/Theme.Toolbar.Title" />
+    app:titleTextAppearance="@style/Theme.Toolbar.Title"
+    app:contentInsetStart="35dp"/>

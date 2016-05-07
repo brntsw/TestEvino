@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">TestEvino</string>
+    <string name="app_name" translatable="false">Evino</string>
     <string name="splash_title">Evino</string>
     <string name="splash_subtitle">Vinho - Sabor - Estilo</string>
     <string name="login_title">Logar no Evino</string>
@@ -12,6 +12,8 @@
     <string name="tab_cart">Carrinho</string>
     <string name="wine_image_description">Garrafa de vinho</string>
     <string name="delete_purchase">Apagar a compra</string>
+    <string name="total_value">Valor total: </string>
+    <string name="bt_shop">Finalizar</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="hello_world">Hello world!</string>

@@ -1,4 +1,4 @@
 <resources>
-    <dimen name="titulo_toolbar">28sp</dimen>
+    <dimen name="titulo_toolbar">40sp</dimen>
     <dimen name="texto_tab">22sp</dimen>
 </resources>

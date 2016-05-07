@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -7,11 +8,18 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
 
-    <fragment
-        android:id="@+id/fragment_main"
-        android:name="evino.test.com.br.testevino.fragments.FragmentTabsMain"
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar"/>
+        android:layout_below="@+id/toolbar">
+
+        <fragment
+            android:id="@+id/fragment_main"
+            android:name="evino.test.com.br.testevino.fragments.FragmentTabsMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </android.support.v4.widget.DrawerLayout>
 
 </RelativeLayout>

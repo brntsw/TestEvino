@@ -28,7 +28,7 @@ public class FragmentTabWine extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.fragment_tab, container, false);
+        LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.fragment_tab_wine, container, false);
 
         // TODO Dummy data wines ->>>> Change this with the data provenient from the nertwork
         List<String> infos1 = new ArrayList<>();

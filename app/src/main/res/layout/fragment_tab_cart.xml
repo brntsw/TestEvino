@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/recycler"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tv_total_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_value"/>
+
+        <Button
+            android:id="@+id/bt_shop"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_shop"
+            android:textSize="26sp"
+            android:background="@drawable/button"
+            android:drawableLeft="@drawable/cart"
+            android:drawableStart="@drawable/cart"
+            android:gravity="center|center_horizontal"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

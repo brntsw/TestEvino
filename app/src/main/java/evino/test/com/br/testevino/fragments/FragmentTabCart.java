@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ public class FragmentTabCart extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.fragment_tab, container, false);
+        RelativeLayout layout = (RelativeLayout) inflater.inflate(R.layout.fragment_tab_cart, container, false);
 
         // TODO Dummy data purchases ->>>> Change this with the data provenient from the nertwork
         List<Purchase> purchases = new ArrayList<>();
