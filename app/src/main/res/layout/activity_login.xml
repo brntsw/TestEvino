@@ -37,7 +37,7 @@
         android:id="@+id/bt_login"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="@string/bt_logar"
+        android:text="@string/bt_login"
         android:textSize="32sp"
         android:background="@drawable/button"
         android:drawableLeft="@drawable/lock_icon"

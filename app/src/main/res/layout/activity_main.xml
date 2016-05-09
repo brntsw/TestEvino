@@ -1,8 +1,9 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <include
         android:id="@+id/toolbar"
@@ -11,15 +12,57 @@
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar">
+        android:layout_height="match_parent">
 
+        <!-- Activity view -->
         <fragment
             android:id="@+id/fragment_main"
             android:name="evino.test.com.br.testevino.fragments.FragmentTabsMain"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
+        <RelativeLayout
+            android:id="@+id/relative_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#fff">
+
+            <ImageView
+                android:id="@+id/img_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/user"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/user_image_description"/>
+
+            <TextView
+                android:id="@+id/tv_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/img_user"/>
+
+            <Button
+                android:id="@+id/bt_logout"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/bt_logout"
+                android:textSize="32sp"
+                android:background="@drawable/button"
+                android:drawableLeft="@drawable/lock_icon"
+                android:drawableStart="@drawable/lock_icon"
+                android:gravity="center|center_horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="80dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
     </android.support.v4.widget.DrawerLayout>
 
-</RelativeLayout>
+</LinearLayout>

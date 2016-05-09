@@ -5,7 +5,7 @@
             <solid android:color="@color/colorPrimary" />
         </shape>
     </item>
-    <item android:left="10dp" android:right="20dp">
+    <item android:left="42dp">
         <bitmap android:src="@drawable/wine_bottle" android:gravity="left" />
     </item>
 </layer-list>

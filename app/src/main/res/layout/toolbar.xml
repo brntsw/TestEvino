@@ -9,4 +9,4 @@
     android:elevation="2dp"
     android:theme="@style/Theme.Toolbar"
     app:titleTextAppearance="@style/Theme.Toolbar.Title"
-    app:contentInsetStart="35dp"/>
+    app:titleMarginStart="10dp"/>
